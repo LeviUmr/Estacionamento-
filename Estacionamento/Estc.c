@@ -12,14 +12,6 @@ struct car
     char marca[20];
 
 } cars[15];
-
-/*struct language
-{   
-    char lang[20];
-    const char en_allStrings[20][20]={"\nCar id : %d\nmodel: %s\n\n,a,b",1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,1}; 
-    const char pt_allStrings[20][20]={};
-}*/
-
 int i = 0, choose = 0, *pointerCar;
 
 void carsInput();
@@ -37,7 +29,7 @@ void carsShow()
 {
     for (i = 0; i < choose; i++)
     {
-        printf("\nCar id : %d\nmodel: %s\n\n,a,b"", cars[i].id, cars[i].model);
+        printf("\nCar id : %d\nmodel: %s\n\n,a,b", cars[i].id, cars[i].model);
     }
 }
 
@@ -49,9 +41,9 @@ void carsInput()
         printf("\n\nEntry the quantity of cars that you want to add: ");
         setbuf(stdin, NULL);
         scanf("%d", &choose);
-        if(choose>10)
+        if (choose > 10)
         {
-         printf("\n\n---> the limit is 10 cars! <---\n\n");
+            printf("\n\n---> the limit is 10 cars! <---\n\n");
         }
     } while (choose <= 0 || choose > 10);
 
